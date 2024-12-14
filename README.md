@@ -1,5 +1,7 @@
 # hero-theme-eureka
-自用 Hexo 主题，基于[Solitude](https://github.com/everfu/hexo-theme-solitude) v2.1.7 魔改。
+自用 Hexo 主题，基于 [Solitude](https://github.com/everfu/hexo-theme-solitude) v2.1.7 魔改。
+
+demo: https://r1n.top
 
 其主要修改有：
 - 修改 home-top，改为双行大标题 + 小标题，移除了大封面以及滚动图像。
@@ -16,4 +18,4 @@ git clone https://github.com/r1i1na/hero-theme-eureka.git /themes/eureka
 theme: eureka
 ```
 
-喜欢的话自己拿去玩，至于配置的话，直接参考[Solitude 官方文档](https://solitude.js.org/zh/)就行了。
+喜欢的话自己拿去玩，至于配置的话，直接参考 [Solitude 官方文档](https://solitude.js.org/zh/) 就行了。
