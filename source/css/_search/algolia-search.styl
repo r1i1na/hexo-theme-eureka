@@ -1,0 +1,182 @@
+.search-dialog
+  position fixed
+  top 5rem
+  left 50%
+  z-index 1001
+  display none
+  margin-left -15rem
+  padding 1rem
+  width 30rem
+  flex-direction column
+  box-shadow var(--rin-shadow-lightblack)
+  background var(--rin-card-bg)
+  border var(--style-border)
+  transition 0.3s
+  border-radius 8px
+  animation slide-in .3s ease 0s 1 normal none running
+  gap: 16px
+
+  &:hover
+    border var(--style-border-hover)
+    box-shadow var(--rin-shadow-theme)
+    +maxWidth768()
+      border none
+
+  +maxWidth768()
+    top 0
+    left 0
+    margin 0
+    width 100%
+    height 100%
+    border 0
+
+  .algolia-navbar
+    display flex
+    align-items center
+
+  .search-close-button
+    margin-left: 4px
+    padding 4px
+    color var(--rin-gray)
+    font-size 1.4em
+    line-height 1
+    cursor pointer
+    transition color .2s ease-in-out 0s
+
+    &:hover
+      color var(--rin-main)
+
+  .algolia-tips-text
+    margin-left .4rem
+
+  .search-box, .ais-SearchBox
+    padding-top 8px
+    max-width 100%
+    position relative
+    width 100%
+    min-width 100%
+
+    input, .ais-SearchBox-input
+      height 100%
+      width 100%
+      padding 0.25rem 0.7rem
+      outline 0
+      border var(--style-border)
+      border-radius 8px
+      background var(--rin-secondbg)
+      color var(--rin-fontcolor)
+
+      &:focus
+        border var(--style-border-hover)
+
+  .ais-Pagination
+    .ais-Pagination-item--disabled
+      visibility hidden
+
+  #search-results
+    max-height calc(80vh - 130px)
+    overflow-y auto
+
+    +maxWidth768()
+      max-height 80vh !important
+
+  .ais-Hits-list
+    padding 0
+    margin 0
+
+  .algolia-hit-item-content
+    margin 0
+    padding-left 10px
+    font-size 14px
+    color var(--rin-gray)
+
+  .algolia-hit-item-link
+    width auto
+    max-width 100%
+    white-space nowrap
+    text-overflow ellipsis
+    overflow hidden
+    font-weight bold
+
+    &:hover
+      color var(--rin-main)
+  
+  .ais-Stats-text
+    font-size 12px
+
+  mark
+    color var(--rin-theme)
+    font-style normal
+    background var(--rin-card-bg)
+
+  .ais-Hits--empty
+    font-weight 600
+
+  .ais-Pagination-list
+    padding 0
+    text-align center
+
+  .ais-Pagination-item.pagination-item
+    margin 0 0.2rem
+    padding 0
+    display inline-block
+
+    a
+      border-radius 4px
+      color var(--rin-white)
+      cursor pointer
+      display inline-block
+      min-width 1.2rem
+      text-align center
+      line-height 1.2rem
+
+  .search-dialog__title
+    font-weight 700
+    color var(--rin-main)
+    font-size 1.4em
+    line-height 1
+
+  #algolia-tips
+    color var(--rin-secondtext)
+    width 100%
+    margin auto
+
+    .algolia-tips-text
+      margin-left .4rem
+
+#search-mask
+  position fixed
+  inset 0
+  z-index 1000
+  display none
+  background rgba(0, 0, 0, 0.6)
+  backdrop-filter blur(12px)
+  -webkit-backdrop-filter blur(12px)
+  transform translateZ(0)
+  background var(--rin-maskbgdeep)
+
+#algolia-hits
+  .tag-list
+    padding 4px 8px
+    border-radius 8px
+    margin-right 0.5rem
+    margin-top 0.5rem
+    border var(--style-border-always)
+
+    &:hover
+      background var(--rin-main)
+      color var(--rin-white)
+
+.ais-Pagination-item--selected a
+  background var(--rin-main)
+
+.algolia-tips
+    color: var(--rin-secondtext);
+    margin-left: auto;
+    opacity: .8;
+
+    i 
+      font-size: 18px
+
+#algolia-search .search-dialog .ais-SearchBox-input::placeholder
+    opacity: .6

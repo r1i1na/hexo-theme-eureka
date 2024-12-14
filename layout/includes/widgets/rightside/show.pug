@@ -1,0 +1,16 @@
+.rs_show
+    if theme.rightside.hide.enable
+        button.config(type='button' title=_p('rightside.show.gear') onclick='document.querySelector(".rs_hide").classList.toggle("show")')
+            i.fas.fa-gear.fa-spin
+    if showToc
+        button.mobile.toc(type='button' title=_p('rightside.show.toc') onclick="document.querySelector('#card-toc').classList.toggle('open')")
+            i.fas.fa-list
+    if page.comment
+        button.comment(type='button' title=_p('rightside.show.comment') onclick="sco.scrollTo('post-comment')")
+            i.fas.fa-comment
+    if theme.comment.commentBarrage && page.comment
+        button.barrage.pc(type='button' title=_p('rightside.show.barrage') onclick="sco.switchCommentBarrage()")
+            span= _p('rightside.show.barrage')
+    button.top(type='button' title=_p('rightside.show.top') onclick='sco.toTop()')
+        i.fas.fa-arrow-up
+        span#percent= "0"

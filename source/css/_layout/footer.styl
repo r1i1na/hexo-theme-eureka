@@ -1,0 +1,270 @@
+#footer
+  position relative
+  background linear-gradient(180deg, var(--rin-card-bg-none) 0, var(--rin-card-bg) 25%)
+  display flex
+  flex-direction column
+  margin-top .5rem
+
+  +maxWidth768()
+    margin-top 0
+
+  &:before
+    position absolute
+    width 100%
+    height 100%
+    content ''
+    z-index -1
+
+
+  if hexo-config('post.footer.enable')
+    div#st-footer-bar
+      display flex
+      flex-direction column
+      align-items center
+      margin-top 0px
+
+      a.footer-bar-link
+        padding 4px 16px
+        background var(--rin-secondbg)
+        border-radius 20px
+        margin-top 8px
+        font-size 14px
+        cursor pointer
+        border var(--style-border-always)
+
+        &:hover
+          background var(--rin-main)
+          color var(--rin-white)
+          transform scale(1.1)
+          border-color var(--rin-main)
+
+      .footer-logo
+        font-size 24px
+
+      .footer-bar-description
+        color var(--rin-secondtext)
+        font-weight 700
+        padding: 0 0.5rem
+        text-align: center
+
+  #footer_deal
+    justify-content center
+    display flex
+    padding-top 2rem
+    align-items center
+
+    +maxWidth768()
+      flex-wrap wrap
+      flex-direction row
+
+    i
+      font-size .8rem
+      line-height .9rem
+      height .9rem
+
+    .deal_link
+      display flex
+      margin 1rem 27px
+      color var(--rin-card-bg)
+      border-radius 3rem
+      width 32px
+      height 32px
+      background var(--rin-fontcolor)
+      justify-content center
+      align-items center
+      transition .3s
+
+      &:hover
+        color var(--rin-white)
+        background var(--rin-main)
+        transform scale(1.1)
+
+    if hexo-config('footer.information.author')
+      .footer_mini_logo
+        width 50px
+        height 50px
+        margin 0 1rem
+        cursor pointer
+        transition cubic-bezier(0, 0, 0, 1.29) .5s
+        user-select none
+        border-radius 50px
+        overflow hidden
+        +maxWidth768()
+          display none
+
+        &:hover
+          transform scale(1.2)
+
+  #st-footer
+    display flex
+    flex-direction row
+    width 100%
+    max-width 1200px
+    justify-content space-between
+    flex-wrap wrap
+    margin 1rem auto 3rem
+    padding 0 1rem
+
+    .footer-links
+      display flex
+      flex-direction column
+
+    .footer-item
+      font-size .8rem
+      line-height .8rem
+      color var(--rin-fontcolor)
+      margin-right auto
+      overflow hidden
+      white-space nowrap
+      text-overflow ellipsis
+      max-width 120px
+      cursor pointer
+      padding 8px
+      border-radius 12px
+
+      &:hover
+        color var(--rin-theme)
+        background var(--rin-main-op-light)
+
+        [data-theme=dark] &
+          background var(--rin-theme-op)
+
+    .footer-group
+      min-width 120px
+
+    .footer-title-group
+      display flex
+      align-items center
+      margin .5rem 0 .7rem 8px
+
+      a
+        margin-left 8px
+
+        &:hover i
+          color var(--rin-main)
+          opacity 1
+
+      i
+        line-height 1
+        color var(--rin-secondtext)
+        transition .3s
+        font-size 16px
+        opacity .6
+
+      .footer-title
+        margin 0
+
+    .footer-title
+      color var(--rin-secondtext)
+      font-size .8rem
+      margin-left 8px
+
+    .random-friends-btn
+      display flex
+      margin-left 8px
+
+  /#footer-bar
+    color var(--rin-fontcolor)
+    margin-top 1rem
+    background var(--rin-secondbg)
+    display flex
+    overflow hidden
+    z-index 1
+    transition .3s
+    border-top var(--style-border-always)
+
+    .footer-bar-links
+      display flex
+      justify-content space-between
+      max-width 1400px
+      width 100%
+      margin 0 auto
+      flex-wrap wrap
+      align-items center
+      line-height 1
+      padding 1rem 1.5rem
+      +maxWidth768()
+        justify-content center
+        gap 8px
+
+    .footer-bar-left
+      display flex
+      gap 8px
+      flex-direction column
+      +maxWidth768()
+        align-items center
+
+      .copyright
+        display flex
+        flex-direction row
+        align-items center
+
+        .footer-bar-link
+          margin 0
+      .beian-group
+        display flex
+        gap 8px
+        flex-wrap wrap
+        +maxWidth768()
+          justify-content center
+
+        a:hover
+          background 0 0
+          color var(--rin-main)
+
+        .beian-icon
+          height 14px
+          min-width 13px
+          min-height 14px
+
+        .footer-bar-link
+          font-size 12px
+          font-weight 400
+          color var(--rin-secondtext)
+          padding 0
+          margin 0
+          display flex
+          align-items center
+          gap 4px
+        
+
+    .footer-bar-link
+      margin 0 4px
+      color var(--rin-fontcolor)
+      font-size .8rem
+      font-weight 700
+      white-space nowrap
+      padding 8px
+      border-radius 32px
+      line-height 1
+      display flex
+      align-items center
+      gap 4px
+
+      .author-avatar
+        width 20px
+        border-radius 20px
+        min-height 20px
+        min-width 20px
+
+      &.cc
+        margin-right 0
+
+        i
+          font-size 18px
+
+          &:not(:last-child)
+            margin-right .5rem
+
+      &:hover
+        color var(--rin-theme)
+        background var(--rin-main-op)
+
+    .footer-bar-right
+      display flex
+      flex-direction row
+      flex-wrap wrap
+      align-items center
+
+    > div > div.footer-bar-left > span
+      margin-right 1rem

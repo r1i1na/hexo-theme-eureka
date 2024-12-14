@@ -1,0 +1,108 @@
+[data-theme=dark]
+  --rin-theme $dark_theme
+  --rin-theme-op $dark_theme_op
+  --rin-theme-op-deep $dark_theme_op_deep
+  --rin-theme-none $dark_theme_none
+  --rin-blue #0084ff
+  --rin-red #ff3842
+  --rin-pink #d44040
+  --rin-green #3e9f50
+  --rin-purple #7a60d2
+  --rin-yellow #ffc93e
+  --rin-yellow-op #ffc93e30
+  --rin-orange #ff953e
+  --rin-fontcolor #f7f7fa
+  --rin-background linear-gradient(90deg, #280e16, #2c3035);
+  --rin-reverse #fff
+  --rin-maskbg rgba(0, 0, 0, 0.6)
+  --rin-maskbgdeep rgba(0, 0, 0, 0.85)
+  --rin-hovertext #0a84ff
+  --rin-ahoverbg #fff
+  --rin-lighttext var(--rin-theme)
+  --rin-secondtext #a1a2b8
+  --rin-scrollbar rgba(200, 200, 223, 0.4)
+  --rin-card-btn-bg #30343f
+  --rin-post-blockquote-bg #000
+  --rin-post-tabs-bg #121212
+  --rin-secondbg #30343f
+  --rin-secondbg-bg #21232a
+  --rin-shadow-nav 0 5px 20px 0px rgba(28, 28, 28, 0.4)
+  --rin-card-bg linear-gradient(90deg, #280e16, #2c3035);
+  --rin-card-bg-op var(--rin-white-op)
+  --rin-card-bg-none #1d1b2600
+  --rin-shadow-lightblack 0 5px 12px -5px rgba(102, 68, 68, 0.0)
+  --rin-shadow-light2black 0 5px 12px -5px rgba(102, 68, 68, 0.0)
+  --rin-card-border #3d3d3f
+  --rin-shadow-border 0 8px 16px -4px #00000050
+  --style-border 1px solid var(--rin-card-border)
+  --style-border-always 1px solid var(--rin-card-border)
+  --style-border-hover 1px solid var(--rin-theme)
+  --style-border-hover-always 1px solid var(--rin-theme)
+  --style-border-dashed 1px dashed var(--rin-theme-op)
+  --style-border-forever 2px solid var(--rin-lighttext)
+  --rin-hl-bg $hl_bg_dark
+  --rin-hltools-bg $hltools_bg_dark
+  --rin-chat-background #4b3539
+  --rin-chat-a-background #2b3a5c
+  --rin-but #000000
+  --rin-scr #2c3035
+  --rin-loader #353438
+  --rin-ban rgba(0, 0, 0, 0.1)
+
+[data-theme=light]
+  --rin-theme $light_theme
+  --rin-theme-op $light_theme_op
+  --rin-theme-op-deep $light_theme_op_deep
+  --rin-theme-op-light #4259ef0d
+  --rin-theme-none $light_theme_none
+  --rin-blue #425aef
+  --rin-red #f04a63
+  --rin-pink #ff7c7c
+  --rin-green #57bd6a
+  --rin-yellow #c28b00
+  --rin-yellow-op #d99c001a
+  --rin-orange #e38100
+  --rin-purple #7a60d2
+  --rin-fontcolor #363636
+  --rin-background linear-gradient(90deg, #bf97a3, #bacbe0);
+  --rin-reverse #000
+  --rin-maskbg rgba(255, 255, 255, 0.6)
+  --rin-maskbgdeep rgba(255, 255, 255, 0.85)
+  --rin-hovertext var(--rin-main)
+  --rin-ahoverbg #f7f7fa
+  --rin-lighttext var(--rin-main)
+  --rin-secondtext rgba(60, 60, 67, 0.8)
+  --rin-scrollbar rgba(60, 60, 67, 0.4)
+  --rin-card-btn-bg #edf0f7
+  --rin-post-blockquote-bg #fafcff
+  --rin-post-tabs-bg #f2f5f8
+  --rin-secondbg #f7f7f9
+  --rin-secondbg-bg var(--rin-secondbg)
+  --rin-shadow-nav 0 5px 12px -5px rgba(102, 68, 68, 0.05)
+  --rin-card-bg #fff
+  --rin-card-bg-op var(--rin-black-op)
+  --rin-card-bg-none rgba(255, 255, 255, 0)
+  --rin-shadow-lightblack 0 5px 12px -5px rgba(102, 68, 68, 0.00)
+  --rin-shadow-light2black 0 5px 12px -5px rgba(102, 68, 68, 0.00)
+  --rin-card-border #e3e8f7
+  --rin-shadow-border 0 8px 16px -4px #2c2d300c
+  --style-border 1px solid var(--rin-card-border)
+  --style-border-always 1px solid var(--rin-card-border)
+  --style-border-hover 1px solid var(--rin-main)
+  --style-border-hover-always 1px solid var(--rin-main)
+  --style-border-dashed 1px dashed var(--rin-theme-op)
+  --style-border-forever 2px solid var(--rin-main)
+  --rin-navbg var(--rin-theme-op)
+  --rin-hl-bg $hl_bg_light
+  --rin-hltools-bg $hltools_bg_light
+  --rin-chat-background #332c36
+  --rin-chat-a-background #f7f9fe
+  --rin-but #ffffff
+  --rin-scr #fff
+  --rin-loader #f3f0f4
+  --rin-ban rgba(255, 255, 255, 0.7)
+
+:root
+  +maxWidth768()
+    --style-border 0px solid var(--rin-none)
+    --style-border-hover 0px solid var(--rin-main)

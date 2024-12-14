@@ -1,0 +1,46 @@
+if hexo-config('loading.pace')
+  .pace
+    pointer-events: none
+    user-select: none
+    z-index: 2000
+    position: fixed
+    top: 55px
+    left: 0
+    right: 0
+    height: 4px
+    background: var(--rin-loader)
+    overflow: hidden
+    transition: opacity 0.3s ease-out;
+
+    &.pace-inactive
+      opacity: 0
+      transition: opacity 0.3s ease-out;
+
+      .pace-progress
+        opacity: 0
+        transition: opacity 0.3s ease-out;
+
+    .pace-progress
+      box-sizing: border-box
+      transform: translate3d(0, 0, 0)
+      z-index: 2000
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 0
+      background: var(--rin-theme)
+      animation: android-loader 2s ease infinite
+      background-size: 200%
+
+@keyframes android-loader
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }

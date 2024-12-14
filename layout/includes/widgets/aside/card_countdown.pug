@@ -1,0 +1,9 @@
+if theme.aside.card_countdown.enable
+  .card-widget.card-countdown
+    .item-content
+      .cd-count-left#countLeft
+        span.cd-text 距离
+        span.cd-name#eventName!= theme.aside.card_countdown.event_name
+        span.cd-time#daysUntil
+        span.cd-date#eventDate!= theme.aside.card_countdown.event_date
+      .cd-count-right#countRight

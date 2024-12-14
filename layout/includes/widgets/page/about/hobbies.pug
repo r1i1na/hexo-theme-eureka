@@ -1,0 +1,38 @@
+- var games = site.data.about.game
+
+if games
+    .author-content
+        each game, index in games
+            style.
+                .game-#{index}::after {
+                    box-shadow: #{game.box_shadow} !important;
+                }
+            .author-content-item.game(class=`game-${index}`, style=`background: url(${game.img}) no-repeat top; background-size: cover;`)
+                .card-content
+                    .author-content-item-tips= game.title
+                    span.author-content-item-title= game.subtitle
+                    .content-bottom
+                        if game.icon_group
+                            .icon-group
+                                each icon in game.icon_group
+                                    i(style=`background-image: url(${icon})`)
+                        else if game.tips_left
+                            .tips= game.tips_left
+                        if game.tips_right
+                            .tips= game.tips_right
+
+if site.data.about.likes
+    - const likes = site.data.about.likes
+    .author-content
+        each like in likes
+            .author-content-item(class=like.type, style=`background: url(${like.bg}) no-repeat center; background-size: cover;`)
+                .card-content
+                    .author-content-item-tips= like.tips
+                    span.author-content-item-title= like.title
+                    .content-bottom
+                        .tips= like.subtips
+                        if like.button
+                            .banner-button-group
+                                a.banner-button(href=url_for(like.button_link))
+                                    i.solitude.fa-solid.fa-circle-chevron-right
+                                    span.banner-button-text= like.button_text
