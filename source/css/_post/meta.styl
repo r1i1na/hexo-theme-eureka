@@ -1,7 +1,6 @@
 .post
   #page-header.post-bg
     height 20rem
-    background-color var(--rin-background)
     transition .6s
     overflow hidden
 
@@ -9,15 +8,13 @@
       height: 25rem
 
     +maxWidth768()
-      height 30rem
-      background-color var(--rin-main) !important
+      height 15rem
       transition 0s
       margin-bottom -12px
 
     &::before
       transition .3s
       height 20rem
-      background-color var(--rin-background)
       opacity 1
       position absolute
       top 0
@@ -27,9 +24,8 @@
       content ""
 
       +minWidth1300()
-        height 25rem
+        height 20rem
         opacity 0
-        background-color var(--rin-main)
         animation slide-in-op .6s 0s forwards
 
       +maxWidth768()
@@ -106,7 +102,7 @@
         transform rotate(0) translateY(0) scale(1)
         filter blur(0)
         width 100%
-        height 30rem
+        height 15rem
 
         &:after
           box-shadow 0 0 205px 59px var(--rin-main) inset
