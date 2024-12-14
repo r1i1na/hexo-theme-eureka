@@ -1,4 +1,4 @@
-# hero-theme-eureka
+# hexo-theme-eureka
 自用 Hexo 主题，基于 [Solitude](https://github.com/everfu/hexo-theme-solitude) v2.1.7 魔改。
 
 ![预览](/preview.png)
