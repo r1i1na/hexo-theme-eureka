@@ -1,0 +1,248 @@
+span.tags-punctuation
+  display flex
+  align-items center
+
+.bber-reply
+  cursor pointer
+  margin 0 4px
+
+  &:hover
+    color var(--rin-main)
+
+.post-tips
+  color var(--rin-gray)
+  font-size 14px
+  position absolute
+  bottom 1rem
+  left 2rem
+
+  +maxWidth768()
+    left 1rem
+
+  a
+    color var(--rin-gray)
+    border none
+    margin-left 4px
+
+    &:hover
+      color var(--rin-main)
+
+.article-post-content-chat-container
+  margin 0
+
+.chat-item
+  display flex
+  margin-bottom 0rem
+  position relative
+
+.chat-item.user
+  justify-content flex-end
+  margin-bottom 0rem
+
+.chat-item.assistant
+  justify-content flex-start
+  margin-bottom 0rem
+
+.chat-bubble
+  padding 0px 12px
+  border-radius 10px
+  max-width 70%
+  max-height 50%
+  word-wrap break-word
+  word-break break-word
+  box-shadow 0 2px 4px rgba(0, 0, 0, 0.1)
+
+.chat-item.user .chat-bubble
+  background-color var(--rin-chat-background)
+  text-align left
+  color #ffffff
+  margin-top 15px
+
+.chat-item.assistant .chat-bubble
+  background-color var(--rin-chat-a-background)
+  text-align left
+  color var(--rin-fontcolor)
+  margin-top 15px
+
+.chat-item.user .chat-nickname
+  position absolute
+  top -25px
+  right 0
+  font-size 12px
+  font-weight bold
+  color var(--rin-fontcolor)
+  background-color var(--rin-background)
+  padding 2px 5px
+  margin-top 15px
+  border-radius 5px
+  box-shadow 0 0 2px rgba(0, 0, 0, 0.1)
+
+.chat-item.assistant .chat-nickname
+  position absolute
+  top -25px
+  left 0
+  font-size 12px
+  font-weight bold
+  color var(--rin-fontcolor)
+  background-color var(--rin-background)
+  padding 2px 5px
+  margin-top 15px
+  border-radius 5px
+  box-shadow 0 0 2px rgba(0, 0, 0, 0.1)
+
+.footer-image
+  position absolute
+  width 100%
+  bottom 98px
+  left 0
+
+@media screen and (max-width: 594px)
+  #footer-image img.image
+    position absolute !important
+    bottom 175px
+    left 0
+    width 100% !important
+    max-width 100% !important
+    height auto
+    margin 0 auto
+    display block
+    opacity 0.9 !important
+    object-fit cover
+
+@media screen and (min-width: 595px) and (max-width: 768px)
+  #footer-image img.image
+    position absolute !important
+    bottom 142px
+    left 0
+    width 100% !important
+    max-width 100% !important
+    height auto
+    margin 0 auto
+    display block
+    opacity 0.9 !important
+    object-fit cover
+
+@media screen and (min-width: 769px) and (max-width: 1023px)
+  #footer-image img.image
+    position absolute !important
+    bottom 134px
+    left 0
+    width 100% !important
+    max-width 100% !important
+    height auto
+    margin 0 auto
+    display block
+    opacity 0.9 !important
+    object-fit cover
+
+@media screen and (min-width: 1024px)
+  #footer-image img.image
+    position absolute !important
+    bottom 100px
+    left 50%
+    transform translateX(-50%) !important
+    width 30% !important
+    max-width 100%
+    height auto
+    opacity 0.9
+
+.efu-link
+  display grid
+  margin 10px
+  background var(--rin-hltools-bg)
+  border-radius 10px
+  grid-template-rows 28px min-content
+  grid-template-columns 80px calc(100% - 80px)
+  height 100px
+  padding 5px
+  transition 0.2s
+  -webkit-transition 0.3s
+  -moz-transition 0.3s
+  -ms-transition 0.3s
+  -o-transition 0.3s
+  position relative
+
+.efu-link:after
+  content ""
+  top 50%
+  position absolute
+  right 15px
+  width 16px
+  height 16px
+  background-color var(--rin-fontcolor)
+  -webkit-mask-image url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB0PSIxNzI1Mjk1MDA0Njc5IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjE2NTciIGlkPSJteF9uXzE3MjUyOTUwMDQ2NzkiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZD0iTTgxNi42NTMwOTMgNDY5LjU0NDA0OWMtMS40OTUwNS0xLjQ5NTA1LTMuMDYwNzA5LTIuODc0NDY3LTQuNjc2NTA5LTQuMTU5NzRMNDI4LjQ3NTE5IDc5Ljg5NTY1NWMtMjEuMzUxMjg0LTIxLjM1MDI2MS01NS45Njc2ODYtMjEuMzUwMjYxLTc3LjMxNzk0NiAwLTIxLjM1MDI2MSAyMS4zNTEyODQtMjEuMzUwMjYxIDU1Ljk2NjY2MyAwIDc3LjMxNzk0NmwzNDkuMjU5NTIyIDM1MS4yNDc4MDZMMzQzLjY1NjQwOSA4NjQuODgzMDQ5Yy0yMS4zNTAyNjEgMjEuMzUxMjg0LTIxLjM1MDI2MSA1NS45NjY2NjMgMCA3Ny4zMTg5NyAyMS4zNTAyNjEgMjEuMzUwMjYxIDU1Ljk2NjY2MyAyMS4zNTAyNjEgNzcuMzE3OTQ2IDBsMzkwLjk5ODEzNS0zOTAuNjYxNDY4YzEuNjE2ODI0LTEuMjg2Mjk2IDMuMTgzNTA2LTIuNjY0Njg5IDQuNjc5NTc5LTQuMTYwNzYzIDEwLjc0MDYyMi0xMC43NDA2MjIgMTYuMDczMDctMjQuODM5NzM1IDE2LjAwNjU1Ni0zOC45MTczNThDODMyLjcyNjE2NCA0OTQuMzgyNzYgODI3LjM5MzcxNSA0ODAuMjg0NjcxIDgxNi42NTMwOTMgNDY5LjU0NDA0OXoiIGZpbGw9InZhcigtLWFyaWEtZm9udGNvbG9yKSIgcC1pZD0iMTY1OCI+PC9wYXRoPjwvc3ZnPg==')
+  mask-image url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB0PSIxNzI1Mjk1MDA0Njc5IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjE2NTciIGlkPSJteF9uXzE3MjUyOTUwMDQ2NzkiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZD0iTTgxNi42NTMwOTMgNDY5LjU0NDA0OWMtMS40OTUwNS0xLjQ5NTA1LTMuMDYwNzA5LTIuODc0NDY3LTQuNjc2NTA5LTQuMTU5NzRMNDI4LjQ3NTE5IDc5Ljg5NTY1NWMtMjEuMzUxMjg0LTIxLjM1MDI2MS01NS45Njc2ODYtMjEuMzUwMjYxLTc3LjMxNzk0NiAwLTIxLjM1MDI2MSAyMS4zNTEyODQtMjEuMzUwMjYxIDU1Ljk2NjY2MyAwIDc3LjMxNzk0NmwzNDkuMjU5NTIyIDM1MS4yNDc4MDZMMzQzLjY1NjQwOSA4NjQuODgzMDQ5Yy0yMS4zNTAyNjEgMjEuMzUxMjg0LTIxLjM1MDI2MSA1NS45NjY2NjMgMCA3Ny4zMTg5NyAyMS4zNTAyNjEgMjEuMzUwMjYxIDU1Ljk2NjY2MyAyMS4zNTAyNjEgNzcuMzE3OTQ2IDBsMzkwLjk5ODEzNS0zOTAuNjYxNDY4YzEuNjE2ODI0LTEuMjg2Mjk2IDMuMTgzNTA2LTIuNjY0Njg5IDQuNjc5NTc5LTQuMTYwNzYzIDEwLjc0MDYyMi0xMC43NDA2MjIgMTYuMDczMDctMjQuODM5NzM1IDE2LjAwNjU1Ni0zOC45MTczNThDODMyLjcyNjE2NCA0OTQuMzgyNzYgODI3LjM5MzcxNSA0ODAuMjg0NjcxIDgxNi42NTMwOTMgNDY5LjU0NDA0OXoiIGZpbGw9InZhcigtLWFyaWEtZm9udGNvbG9yKSIgcC1pZD0iMTY1OCI+PC9wYXRoPjwvc3ZnPg==')
+
+.efu-link-tip
+  grid-column-start 1
+  grid-column-end 3
+  grid-row 1
+  display inline-flex
+  white-space nowrap
+  font-size 12px
+  line-height 1.5
+  color var(--rin-fontcolor)
+  margin 0 15px
+  padding-top 5px
+  border-bottom var(--rin-code-background)
+
+.efu-link-subtitle
+  grid-column 2
+  grid-row 3
+
+.efu-link-img
+  grid-column 1
+  grid-row-start 2
+  grid-row-end 4
+  margin auto
+  border-radius 50%
+  width 60px
+  height 60px
+  object-fit cover
+
+.efu-link-title
+  white-space nowrap
+  overflow hidden
+  text-overflow ellipsis
+
+.efu-link-subtitle
+  font-size 12px
+  color var(--rin-fontcolor)
+
+.efu-link:hover
+  background-color var(--rin-theme)
+  box-shadow 0 0 8px var(--rin-theme)
+  border 1px solid var(--rin-theme)
+
+.efu-link:hover *
+  color #fff
+
+.efu-link:hover:after
+  background-color #fff
+
+.article-container img:not(.post_bg)
+  border-radius 12px
+  object-fit cover
+  display block
+  margin auto
+  max-width 90%
+  max-height 450px
+
+.flink#banners
+  width 100% !important
+
+.flink#banners .banners-title
+  left 2rem !important
+  display flex !important
+  flex-direction column !important
+  transform translate(0%)
+
+.flink#banners .banners-title-small
+  font-size 10px !important
+  text-align left
+  margin-top 5px
+
+.flink#banners .banners-title-big
+  text-align left
+  font-size 36px !important
+  transform translateY(0%)

@@ -1,0 +1,26 @@
+- const {key,option,title} = theme.tianli_talk
+
+span.needEndHide#rinTalk(onclick="togglePostChatContainer(); return false;" title=title)
+    i.solitude.fab.fa-bilibili
+    span.rinTalkTitle=title
+
+script.
+    var postChatConfig = {
+    backgroundColor: "var(--rin-main)",
+    bottom: "60px",
+    ...!{JSON.stringify(option)}
+    };
+
+    let b = true;
+
+    document.getElementById('rinTalk').addEventListener('click', function () {
+        this.classList.toggle('on');
+        let rin = this
+        b && setTimeout(() => {
+            document.getElementById('close-button').addEventListener('click', function () {
+                rin.classList.remove('on');
+            })
+        }, 0);
+        b = false
+    });
+script(pjax data-postChat_key=key src="https://ai.tianli0.top/static/public/postChatUser.min.js")

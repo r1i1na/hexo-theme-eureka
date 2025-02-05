@@ -1,0 +1,20 @@
+.flink#banners {
+    width: 100% !important;
+}
+.flink#banners .banners-title {
+    left: 2rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transform: translate(0%);
+}
+.flink#banners .banners-title-small {
+    font-size: 10px !important;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.flink#banners .banners-title-big {
+    text-align: left;
+    font-size: 36px !important;
+    transform: translateY(0%);
+}
