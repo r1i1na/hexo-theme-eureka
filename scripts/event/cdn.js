@@ -74,6 +74,11 @@ hexo.extend.filter.register('before_generate', () => {
             file: 'js/third_party/barrage.min.js',
             version
         },
+        waterfall: {
+            name: 'hexo-theme-solitude',
+            file: 'js/third_party/waterfall.min.js',
+            version
+        },
         universe_js: {
             name: 'hexo-theme-solitude',
             file: 'js/third_party/universe.min.js',
