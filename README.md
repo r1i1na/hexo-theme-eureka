@@ -20,4 +20,4 @@ git clone https://github.com/r1i1na/hero-theme-eureka.git /themes/eureka
 theme: eureka
 ```
 
-喜欢的话自己拿去玩，至于配置的话，直接参考 [Solitude 官方文档](https://solitude.js.org/zh/) 就行了。
+喜欢的话自己拿去玩，至于配置的话，直接参考 [Solitude 官方文档](https://solitude.js.org/) 就行了。
